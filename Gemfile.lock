@@ -1,0 +1,56 @@
+PATH
+  remote: .
+  specs:
+    alt (0.1.0)
+      hanami-cli
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ast (2.4.0)
+    coderay (1.1.2)
+    concurrent-ruby (1.0.5)
+    hanami-cli (0.1.0)
+      concurrent-ruby (~> 1.0)
+      hanami-utils (~> 1.1)
+    hanami-utils (1.1.1)
+      concurrent-ruby (~> 1.0)
+      transproc (~> 1.0)
+    method_source (0.9.0)
+    minitest (5.11.3)
+    parallel (1.12.1)
+    parser (2.4.0.2)
+      ast (~> 2.3)
+    powerpack (0.1.1)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    rainbow (3.0.0)
+    rake (10.5.0)
+    rubocop (0.52.1)
+      parallel (~> 1.10)
+      parser (>= 2.4.0.2, < 3.0)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    rubocop-rspec (1.22.1)
+      rubocop (>= 0.52.1)
+    ruby-progressbar (1.9.0)
+    transproc (1.0.2)
+    unicode-display_width (1.3.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  alt!
+  bundler (~> 1.16)
+  minitest (~> 5.0)
+  pry
+  rake (~> 10.0)
+  rubocop
+  rubocop-rspec
+
+BUNDLED WITH
+   1.16.1

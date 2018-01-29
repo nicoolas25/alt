@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require "hanami/cli"
+require "alt"
+
+Hanami::CLI.new(Alt::CLI::Commands).call
