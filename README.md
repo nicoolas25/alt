@@ -19,15 +19,20 @@ that could be added to vim to do the job:
 if executable("alt")
   function! AltCommand(path, vim_command)
     let l:alternate = system("alt guess " . a:path)
-
     if empty(l:alternate)
       echo "No alternate file for " . a:path . " exists!"
     else
-      exec a:vim_command . " " . l:alternate
+      call fzf#run(fzf#wrap('buffers', {
+      \ 'source': split(l:alternate),
+      \ 'sink': a:vim_command,
+      \ 'down': '20%',
+      \'options': '-1'
+      \}))
     endif
   endfunction
 
-  nnoremap <leader>r :call AltCommand(expand('%'), ':e')<cr>
+  " Find the alternate file for the current path and open it
+  nnoremap <leader>r :call AltCommand(expand('%'), 'e')<cr>
 end
 ```
 
